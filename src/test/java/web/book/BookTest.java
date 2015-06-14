@@ -12,4 +12,3 @@ public class BookTest extends TestCase {
         Main.test();
     }
 }
-

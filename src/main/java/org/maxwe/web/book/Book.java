@@ -2,9 +2,7 @@ package org.maxwe.web.book;
 
 /**
  * Created by dingpengwei on 6/13/15.
- * CREATE TABLE 'book'.'book' ( 'id' INT NOT NULL , 'isbn' VARCHAR(80) NOT NULL , 'name' VARCHAR(200) NOT NULL , 'cover' VARCHAR(1000) NOT NULL , 'content' VARCHAR(1000) NOT NULL , 'contentLength' INT NOT NULL ,
- * 'description' VARCHAR(1000) NOT NULL , 'author' VARCHAR(200) NOT NULL , 'publisher' VARCHAR(200) NOT NULL ,
- * 'status' INT NOT NULL , 'createTime' DATETIME NOT NULL , 'updateTime' DATETIME NOT NULL ) ENGINE = InnoDB;
+ * CREATE TABLE book ( id INT NOT NULL , isbn VARCHAR(80) NOT NULL , name VARCHAR(200) NOT NULL , cover VARCHAR(1000) NOT NULL , content VARCHAR(1000) NOT NULL , contentLength INT NOT NULL ,description VARCHAR(1000) NOT NULL , author VARCHAR(200) NOT NULL , publisher VARCHAR(200) NOT NULL ,status INT NOT NULL , createTime DATETIME NOT NULL , updateTime DATETIME NOT NULL ) ENGINE = InnoDB;
  */
 public class Book {
     private int id;

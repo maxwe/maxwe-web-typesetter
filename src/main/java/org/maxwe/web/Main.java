@@ -20,6 +20,8 @@ public class Main {
         Book book = new Book(1,"isbn","this book name","/mnt/sdcard/xxx.png","/mnt/sdcard/xxx",100000l,"very good","dingpengwei","dpw",0);
 
         session.save(book);
+
+
     }
 
 }
