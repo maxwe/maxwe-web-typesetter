@@ -1,117 +1,37 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Bootstrap树形菜单JS代码特效 - JS代码网</title>
-<!--图标样式-->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-<!--主要样式-->
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript">
-$(function(){
-    $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
-    $('.tree li.parent_li > span').on('click', function (e) {
-        var children = $(this).parent('li.parent_li').find(' > ul > li');
-        if (children.is(":visible")) {
-            children.hide('fast');
-            $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
-        } else {
-            children.show('fast');
-            $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
-        }
-        e.stopPropagation();
-    });
-});
-</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>book-list</title>
+	<style type="text/css">
+		html,body{height:100%;overflow:hidden;}
+		body,div,ul,li{margin:0;padding:0;}
+		body{font:12px/1.5 \5fae\8f6f\96c5\9ed1;}
+		ul{list-style-type:none;}
+		#rightMenu{position:absolute;top:-9999px;left:-9999px;}
+		#rightMenu ul{float:left;border:1px solid #979797;background:#f1f1f1 url(http://js.fgm.cc/learn/lesson6/img/line.png) 24px 0 repeat-y;padding:2px;box-shadow:2px 2px 2px rgba(0,0,0,.6);}
+		#rightMenu ul li{float:left;clear:both;height:24px;cursor:pointer;line-height:24px;white-space:nowrap;padding:0 30px;}
+		#rightMenu ul li.sub{background-repeat:no-repeat;background-position:right 9px;background-image:url(http://js.fgm.cc/learn/lesson6/img/arrow.png);}
+		#rightMenu ul li.active{background-color:#f1f3f6;border-radius:3px;border:1px solid #aecff7;height:22px;line-height:22px;background-position:right -8px;padding:0 29px;}
+		#rightMenu ul ul{display:none;position:absolute;}
+	</style>
 
 </head>
 <body>
-<div class="tree well">
-<ul>
-	<li>
-		<span><i class="icon-folder-open"></i>A</span>
+	<div id="rightMenu">
 		<ul>
-			<li>
-				<span><i class="icon-minus-sign"></i>A1</span>
+			<li>新建
 				<ul>
-					<li>
-						<span><i class="icon-leaf"></i>A1-1</span>
-					</li>
+					<li>目录</li>
+					<li>文件</li>
 				</ul>
 			</li>
-			<li>
-				<span><i class="icon-minus-sign"></i>A2</span>
-				<ul>
-					<li>
-						<span><i class="icon-leaf"></i>A2-1</span>
-					</li>
-					<li>
-						<span><i class="icon-minus-sign"></i>A2-2</span>
-						<ul>
-							<li>
-								<span><i class="icon-minus-sign"></i>A2-2-1</span>
-								<ul>
-									<li>
-										<span><i class="icon-leaf"></i>node</span>
-									</li>
-									<li>
-										<span><i class="icon-leaf"></i>node</span>
-									</li>
-								 </ul>
-							</li>
-							<li>
-								<span><i class="icon-leaf"></i>A2-2-2</span>
-							</li>
-							<li>
-								<span><i class="icon-leaf"></i>A2-2-3</span>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<span><i class="icon-leaf"></i>A2-3</span>
-					</li>
-				</ul>
-			</li>
+			<li>删除</li>
+			<li>重命名</li>
 		</ul>
-	</li>
-	<li>
-		<span><i class="icon-folder-open"></i>B</span>
-		<ul>
-			<li>
-				<span><i class="icon-leaf"></i>B1</span>
-			</li>
-		</ul>
-	</li>
-    <li>
-        <span><i class="icon-folder-open"></i>C</span>
-        <ul>
-            <li>
-                <span><i class="icon-leaf"></i>C1</span>
-            </li>
-        </ul>
-    </li>
-    <li>
-        <span><i class="icon-folder-open"></i>D</span>
-        <ul>
-            <li>
-                <span><i class="icon-leaf"></i>D1</span>
-            </li>
-        </ul>
-    </li>
-    <li>
-        <span><i class="icon-folder-open"></i>E</span>
-        <ul>
-            <li>
-                <span><i class="icon-leaf"></i>E1</span>
-            </li>
-        </ul>
-    </li>
-</ul>
-</div>
+	</div>
 
 
-
+	<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
